@@ -1,12 +1,10 @@
 /**
  * Generated using theia-extension-generator
  */
-import { ContainerModule } from '@theia/core/shared/inversify';
-import { MyExtensionContribution } from './myExtension-contribution';
+import { ContainerModule } from "@theia/core/shared/inversify";
+import { MyExtensionContribution } from "./myExtension-contribution";
+import { CommandContribution } from "@theia/core";
 
-
-export default new ContainerModule(bind => {
-
-    // Replace this line with the desired binding, e.g. "bind(CommandContribution).to(MyExtensionContribution)
-    bind(MyExtensionContribution).toSelf();
+export default new ContainerModule((bind) => {
+  bind(CommandContribution).to(MyExtensionContribution);
 });
